@@ -1,0 +1,20 @@
+export const Color = {
+    black: "#070707",
+    warmBlue: "#3d61e9",
+    watermelon: "#ed4975",
+    pastelPink: "#feb8c2",
+    lightPink: "#ffd9ea",
+    nightBlue: "#060c52",
+    powderBlue: "#b3e2f4",
+    tiffanyBlue: "#7eeee0",
+    battleshipGray: "#707074",
+    textGray: "#414141",
+    grayishBrown: "#414141",
+    textLightGray: "#707074",
+    white: "white",
+    inactiveGray: "#eeeeee",
+    orangeyYellow: "#fdb918",
+    lightGray1: "rgb(250, 250, 250)",
+    lightGray2: "rgb(238, 238, 238)",
+    blueGray: "#8e8e93"
+}
