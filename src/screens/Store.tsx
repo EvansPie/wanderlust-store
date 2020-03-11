@@ -20,9 +20,19 @@ export default class Store extends React.Component<Props, State> {
         };
     }
 
-    // <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=GB&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=wanderlust0f-21&language=en_GB&marketplace=amazon&region=GB&placement=B07D23HC9P&asins=B07D23HC9P&linkId=5a62acacea8dcbeee2c7bfdc5d3f6d0c&show_border=true&link_opens_in_new_window=true"></iframe>
-
     componentDidMount() {
+        window.addEventListener('message', function (event) {
+            // alert('message received: ' + JSON.stringify(event.data));
+            if (event.data.deviceWidth) {
+                const zoom = event.data.deviceWidth / 320;
+
+                const meta = document.createElement('meta');
+                meta.setAttribute('content', `width=width, initial-scale=${zoom}, maximum-scale=${zoom}`);
+                meta.setAttribute('name', 'viewport');
+                document.getElementsByTagName('head')[0].appendChild(meta);
+            }
+        });
+
         this.init();
     }
 
