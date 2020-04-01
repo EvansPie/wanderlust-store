@@ -46,7 +46,12 @@ export default class Store extends React.Component<Props, State> {
         return (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: 320 }}>
                 <div style={{
-                    marginTop: 4, marginBottom: 4, marginLeft: 6, marginRight: 6, overflow: 'hidden', backgroundColor: 'white',
+                    marginTop: 4,
+                    marginBottom: 4,
+                    marginLeft: 6,
+                    marginRight: 6,
+                    overflow: 'hidden',
+                    backgroundColor: 'white',
                     fontFamily: 'Helvetica',
                     fontSize: 11,
                     fontWeight: 300,
