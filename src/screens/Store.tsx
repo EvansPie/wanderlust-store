@@ -30,6 +30,8 @@ export default class Store extends React.Component<Props, State> {
                 meta.setAttribute('content', `width=width, initial-scale=${zoom}, maximum-scale=${zoom}`);
                 meta.setAttribute('name', 'viewport');
                 document.getElementsByTagName('head')[0].appendChild(meta);
+
+                window.scrollTo(0, 0);
             }
         });
 
@@ -42,8 +44,21 @@ export default class Store extends React.Component<Props, State> {
 
     render() {
         return (
-            <AmazonGrid />
-            // <WebgainsGrid />
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: 320 }}>
+                <div style={{
+                    marginTop: 4, marginBottom: 4, marginLeft: 6, marginRight: 6, overflow: 'hidden', backgroundColor: 'white',
+                    fontFamily: 'Helvetica',
+                    fontSize: 11,
+                    fontWeight: 300,
+                    textAlign: 'justify'
+                }}>
+                    Wanderlust is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.
+                </div>
+                <AmazonGrid />
+                {/* <WebgainsGrid /> */}
+            </div>
+
+
         )
     }
 }
