@@ -54,7 +54,18 @@ export default class AmazonGrid extends React.Component<Props, State> {
                 products.push(productJSON);
             }
 
-            await this.setState({ products: products });
+            const sortedProducts = products.sort((obj1, obj2) => {
+                if (obj1.position > obj2.position) {
+                    return 1;
+                }
+
+                if (obj1.position < obj2.position) {
+                    return -1;
+                }
+
+                return 0;
+            });
+            await this.setState({ products: sortedProducts });
 
         } catch (error) {
             console.error(error);
