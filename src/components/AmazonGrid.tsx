@@ -45,7 +45,7 @@ export default class AmazonGrid extends React.Component<Props, State> {
 
     async init() {
         try {
-            const snap = await firebase.database().ref('amazon').orderByChild("isHiddent").equalTo(false).once('value');
+            const snap = await firebase.database().ref('amazon').orderByChild("isHidden").equalTo(false).once('value');
             const productsJSON = await snap.val();
             const products: any[] = [];
 
