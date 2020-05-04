@@ -116,7 +116,13 @@ export default class AmazonGrid extends React.Component<Props, State> {
                                                 }}
                                             >
                                                 <div
-                                                    style={{ width: 120, height: 240, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white' }}
+                                                    style={{
+                                                        width: 120,
+                                                        height: 240,
+                                                        justifyContent: 'center',
+                                                        alignItems: 'center',
+                                                        pointerEvents: 'none'
+                                                    }}
                                                 >
                                                     {
                                                         //@ts-ignore
