@@ -86,6 +86,8 @@ export default class AmazonGrid extends React.Component<Props, State> {
         return tempArray;
     }
 
+    prDiv: any;
+
     render() {
         var productsChunked: (string[])[] = [];
         if (this.state.products) {
@@ -107,12 +109,13 @@ export default class AmazonGrid extends React.Component<Props, State> {
                                         console.log(`product: ${JSON.stringify(product)}`);
                                         return (
                                             <div
+                                                ref={r => this.prDiv = r}
                                                 key={`${rowIndex}.${columnIndex}`}
                                                 className="Container"
                                                 style={{ marginLeft: 20, marginRight: 20, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white' }}
                                                 onClick={e => {
                                                     //@ts-ignore
-                                                    window.ReactNativeWebView.postMessage(JSON.stringify({ link: product.url }), "*");
+                                                    window.ReactNativeWebView.postMessage(JSON.stringify({ link: product.url }));
                                                 }}
                                             >
                                                 <div
@@ -137,7 +140,7 @@ export default class AmazonGrid extends React.Component<Props, State> {
                         )
                     })
                 }
-            </div>
+            </div >
         );
     }
 }
