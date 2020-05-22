@@ -57,10 +57,10 @@ export default class Store extends React.Component<Props, State> {
                     fontWeight: 300,
                     textAlign: 'justify'
                 }}>
-                    Wanderlust is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.
+                    Wanderlust is a participant in the Amazon Services LLC Associates Program & Webgains, which are affiliate advertising programs designed to provide the means for sites to earn advertising fees by advertising and linking to them.
                 </div>
-                <AmazonGrid />
-                {/* <WebgainsGrid /> */}
+                {/* <AmazonGrid /> */}
+                <WebgainsGrid />
             </div>
 
 
